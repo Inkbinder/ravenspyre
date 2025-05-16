@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://6la5kk0qx7vr"]
+
+[ext_resource type="Script" path="res://party_member/party_member.gd" id="1_n1vko"]
+[ext_resource type="SpriteFrames" uid="uid://bb5jrhtitw8c0" path="res://party_member/assets/cleric/cleric_sprite_frames.tres" id="2_gawjd"]
+[ext_resource type="PackedScene" uid="uid://owkoiec6lae8" path="res://popup_number/popup_number.tscn" id="3_5g70w"]
+
+[node name="PartyMember" type="Node2D"]
+script = ExtResource("1_n1vko")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("2_gawjd")
+animation = &"idle"
+flip_h = true
+
+[node name="PopupNumber" parent="." instance=ExtResource("3_5g70w")]
+position = Vector2(90, 20)

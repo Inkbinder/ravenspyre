@@ -1,0 +1,22 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://b4f26kj0fkmbj"]
+
+[ext_resource type="Texture2D" uid="uid://bhet1ghp6ciit" path="res://party_member/assets/guard/png/military1_6_idle1 (1).png" id="1_8i2ct"]
+[ext_resource type="Texture2D" uid="uid://cfmiyqv0g7evp" path="res://party_member/assets/guard/png/military1_6_idle1 (2).png" id="2_lpxfl"]
+[ext_resource type="Texture2D" uid="uid://btoxcsoh0203t" path="res://party_member/assets/guard/png/military1_6_idle1 (3).png" id="3_hfue7"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8i2ct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lpxfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hfue7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

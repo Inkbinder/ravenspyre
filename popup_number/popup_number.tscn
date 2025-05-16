@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://owkoiec6lae8"]
+
+[ext_resource type="Script" path="res://popup_number/popup_number.gd" id="1_c724e"]
+[ext_resource type="Texture2D" uid="uid://cm3erehimhxp6" path="res://popup_number/hexagon_brown.png" id="2_fepd1"]
+
+[node name="PopupNumber" type="Node2D"]
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_c724e")
+
+[node name="RoundBrown" type="Sprite2D" parent="."]
+scale = Vector2(1.125, 1)
+texture = ExtResource("2_fepd1")
+
+[node name="Control" type="Control" parent="RoundBrown"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 128.0
+offset_bottom = 128.0
+mouse_filter = 2
+
+[node name="Number" type="RichTextLabel" parent="RoundBrown/Control"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -37.0
+offset_right = 64.0
+offset_bottom = 41.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 52
+bbcode_enabled = true
+text = "[center][color=\"black\"]99[/color][/center]"
+fit_content = true
+shortcut_keys_enabled = false

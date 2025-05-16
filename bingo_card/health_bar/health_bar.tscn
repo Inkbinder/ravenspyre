@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://caywe6jysix8f"]
+
+[ext_resource type="Script" path="res://Godot-NinePatchSprite2D-6fd87c77141eedd11ea2180446bd26eb6fae4a77/addons/nine_patch_sprite_2d/nine_patch_sprite_2d.gd" id="1_10gg3"]
+[ext_resource type="Script" path="res://bingo_card/health_bar/health_bar.gd" id="1_aseeo"]
+[ext_resource type="Texture2D" uid="uid://f7e635plya8u" path="res://bingo_card/health_bar/progress_white_border.png" id="2_xrmri"]
+[ext_resource type="Texture2D" uid="uid://d12dlotw1khjd" path="res://bingo_card/health_bar/progress_red.png" id="3_vo7ae"]
+
+[node name="HealthBar" type="Node2D"]
+script = ExtResource("1_aseeo")
+
+[node name="HealthBarContainer" type="Node2D" parent="."]
+script = ExtResource("1_10gg3")
+texture = ExtResource("2_xrmri")
+size = Vector2(512, 40)
+patch_margin_left = 12
+patch_margin_top = 4
+patch_margin_right = 12
+patch_margin_bottom = 4
+centered = false
+
+[node name="HealthBarFill" type="Node2D" parent="HealthBarContainer"]
+script = ExtResource("1_10gg3")
+texture = ExtResource("3_vo7ae")
+size = Vector2(512, 40)
+patch_margin_left = 12
+patch_margin_top = 4
+patch_margin_right = 12
+patch_margin_bottom = 4
+centered = false

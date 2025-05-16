@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://drf377dh15wj7"]
+
+[ext_resource type="Texture2D" uid="uid://d23tiychc7vg" path="res://bingo_card/panel_brown_dark.png" id="1_uddwm"]
+[ext_resource type="Script" path="res://bingo_card/bingo_card.gd" id="1_vgr8q"]
+
+[node name="BingoCard" type="Node2D"]
+script = ExtResource("1_vgr8q")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1080.0
+offset_bottom = 420.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control"]
+offset_left = 40.0
+offset_top = 8.0
+offset_right = 1040.0
+offset_bottom = 408.0
+texture = ExtResource("1_uddwm")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="CharacterName" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 20.0
+offset_right = 260.0
+offset_bottom = 70.0
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "Alicia"
+fit_content = true
+
+[node name="BingoGrid" type="CanvasGroup" parent="."]
+position = Vector2(60, 80)

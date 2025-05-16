@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://drf377dh15wj7"]
+
+[ext_resource type="Texture2D" uid="uid://d23tiychc7vg" path="res://bingo_card/panel_brown_dark.png" id="1_uddwm"]
+[ext_resource type="Script" path="res://bingo_card/bingo_card.gd" id="1_vgr8q"]
+[ext_resource type="PackedScene" uid="uid://caywe6jysix8f" path="res://bingo_card/health_bar/health_bar.tscn" id="3_gnoea"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxi24"]
+size = Vector2(1060, 416)
+
+[node name="BingoCard" type="Node2D"]
+script = ExtResource("1_vgr8q")
+
+[node name="SelectedArea" type="Area2D" parent="."]
+
+[node name="SelectedAreaShape" type="CollisionShape2D" parent="SelectedArea"]
+position = Vector2(540, 210)
+shape = SubResource("RectangleShape2D_qxi24")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1080.0
+offset_bottom = 420.0
+mouse_filter = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 8.0
+offset_right = 1040.0
+offset_bottom = 408.0
+texture = ExtResource("1_uddwm")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="CharacterName" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 20.0
+offset_right = 260.0
+offset_bottom = 70.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "Alicia"
+fit_content = true
+
+[node name="BingoGrid" type="CanvasGroup" parent="."]
+position = Vector2(60, 80)
+
+[node name="HealthBar" parent="." instance=ExtResource("3_gnoea")]
+position = Vector2(512, 26)

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8n3lw2xih0wk"]
+
+[ext_resource type="Texture2D" uid="uid://g7dos584bwip" path="res://bingo_card/card_number/pattern_grid_paper.png" id="1_bihxf"]
+[ext_resource type="Script" path="res://bingo_card/card_number/card_number.gd" id="1_qyeux"]
+
+[node name="CardNumber" type="Node2D"]
+script = ExtResource("1_qyeux")
+
+[node name="PatternGridPaper" type="Sprite2D" parent="."]
+texture = ExtResource("1_bihxf")
+centered = false
+
+[node name="Control" type="Control" parent="PatternGridPaper"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 64.0
+mouse_filter = 2
+
+[node name="Number" type="RichTextLabel" parent="PatternGridPaper/Control"]
+layout_mode = 2
+offset_top = 7.0
+offset_right = 64.0
+offset_bottom = 55.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "[center][color=\"black\"]88[/color][/center]"
+scroll_active = false
+autowrap_mode = 0

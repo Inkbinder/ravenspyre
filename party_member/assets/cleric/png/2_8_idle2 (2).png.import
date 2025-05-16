@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dr6pnn2n8dxrm"
+path="res://.godot/imported/2_8_idle2 (2).png-858ce6fb9e9e5edf3a9ddfad982b70f1.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://party_member/assets/cleric/png/2_8_idle2 (2).png"
+dest_files=["res://.godot/imported/2_8_idle2 (2).png-858ce6fb9e9e5edf3a9ddfad982b70f1.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

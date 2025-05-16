@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7bq4njcgd46s"]
+
+[ext_resource type="Script" path="res://battle/battle.gd" id="1_v2wud"]
+
+[node name="Battle" type="Node2D"]
+script = ExtResource("1_v2wud")
+
+[node name="CardHolder" type="Node2D" parent="."]
+position = Vector2(0, 656)
+
+[node name="EnemyHolder" type="Node2D" parent="."]
+position = Vector2(880, 320)
+
+[node name="PartyMember1" type="Node2D" parent="."]
+position = Vector2(190, 160)
+
+[node name="PartyMember2" type="Node2D" parent="."]
+position = Vector2(190, 320)
+
+[node name="PartyMember3" type="Node2D" parent="."]
+position = Vector2(190, 480)

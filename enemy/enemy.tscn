@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2uylxouubrln"]
+
+[ext_resource type="Texture2D" uid="uid://cd7lulas357mp" path="res://enemy/enemies/bat.tres" id="1_l2o4w"]
+[ext_resource type="Script" path="res://enemy/enemy.gd" id="1_vs3wl"]
+[ext_resource type="Texture2D" uid="uid://baooawcpw4e6f" path="res://enemy/enemies/bat_fly.tres" id="2_1uldr"]
+[ext_resource type="PackedScene" uid="uid://owkoiec6lae8" path="res://popup_number/popup_number.tscn" id="4_dlllc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2431c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l2o4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1uldr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Enemy" type="Node2D"]
+script = ExtResource("1_vs3wl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2431c")
+
+[node name="PopupNumber" parent="." instance=ExtResource("4_dlllc")]
+position = Vector2(-90, 0)
