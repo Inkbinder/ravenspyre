@@ -8,6 +8,8 @@ signal correct_tap(num)
 
 var bingo_number = preload("res://bingo_card/card_number/card_number.tscn")
 var character_name = ''
+var party_member
+var party_member_data
 
 var selected = false
 
@@ -67,7 +69,7 @@ func handle_faded_number(num):
 
 func handle_damage():
 	print('ouch')
-	#TODO: Check if number was in number_dict and if so trigger getting hit	
+	#TODO: handle damage - reduce health, then if health is zero deactivate card and set character linked with card to death animation instead of idle
 	pass
 
 func create_grid():
